@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+
+.submenuActive{
+    background: white;
+    color: blue;
+}
+
+tr:nth-child(odd) {
+  background-color: #FBF9F7;
+}
