@@ -74,7 +74,7 @@ const ManageCourse = () => {
                                             <Link to={`/editcourse/${item.course_id}`}>
                                                 <FaRegEdit className='text-[#2D2D2D]' />
                                             </Link>
-                                            <button onClick={()=>handleDelete(item.id)} type='submit' className='text-[#D8727D]' >
+                                            <button onClick={()=>handleDelete(item.course_id)} type='submit' className='text-[#D8727D]' >
                                                 <RiDeleteBin6Line />
                                             </button>
                                         </div>

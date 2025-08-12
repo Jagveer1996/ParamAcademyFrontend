@@ -1,23 +1,24 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import paramlogo from '../images/paramlogo.png';
 import forgotPassword from '../images/forgotPassword.png'
 import { useMutation } from '@tanstack/react-query';
 import { forgotPasswordAPI } from '../../api/Auth/changepassword';
- 
+
 const ForgetPassword = () => {
+
 
     const [email, setEmail] = useState("");
 
-    const {mutate} = useMutation({
-        mutationFn : forgotPasswordAPI,
-        onSuccess : (res)=>{
+    const { mutate } = useMutation({
+        mutationFn: forgotPasswordAPI,
+        onSuccess: (res) => {
             console.log(res);
             setEmail("");
         }
     });
 
-    function handleSubmit(){
+    function handleSubmit() {
         const formData = new FormData();
         formData.append("email", email);
         mutate(formData);
@@ -35,7 +36,7 @@ const ForgetPassword = () => {
                             <p className='text-[18px] text-[#718096] font-[400]'>Enter your E-mail to reset your password</p>
                             <div className='w-full flex flex-col gap-[8px]'>
                                 <label htmlFor="" className='text-[20px] text-[#718096]'>E-mail</label>
-                                <input onChange={(e)=>{setEmail(e.target.value)}} value={email} type="text" placeholder='example@gmail.com' className='border-[1px] border-[#CBD5E0] bg-white rounded-[12px] p-[16px]' />
+                                <input onChange={(e) => { setEmail(e.target.value) }} value={email} type="text" placeholder='example@gmail.com' className='border-[1px] border-[#CBD5E0] bg-white rounded-[12px] p-[16px]' />
                             </div>
                             <button onClick={handleSubmit} className='bg-[#3972EF] rounded-[57px] py-[16px] text-[24px] text-white'>Send</button>
                         </div>

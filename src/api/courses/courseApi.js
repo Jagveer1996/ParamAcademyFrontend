@@ -25,6 +25,7 @@ export const getCourseApiID = async (id)=>{
 export const editCourseApiID = async (data)=>{
     const response = await queryClient.put(`/api/coursedetail/${data.id}`, data.formData,{
         headers : {
+            "Content-type": "multipart/form-data", 
             Authorization: `Bearer ${AccessToken}`
         }
     });
