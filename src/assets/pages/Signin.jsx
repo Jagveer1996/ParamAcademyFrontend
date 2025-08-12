@@ -27,10 +27,17 @@ const Signin = () => {
     mutationFn : (data) => Login(data),
     onSuccess : (res) => {
       localStorage.clear();
-      console.log("*******",res.data.email)
+      console.log("*******",res.data.role)
       localStorage.setItem('loginData',res.data.email)
       localStorage.setItem('AccessToken',res.data.AccessToken)
-      navigate('/home');
+      localStorage.setItem('Role', res.data.role);
+      if (res.data.role == 'student'){
+        navigate('/home');
+      }
+      else if (res.data.role == 'admin'){
+        navigate('/dashboard');
+      }
+      
     },
     onError : (error)=>{
       alert(error.response.data.message)

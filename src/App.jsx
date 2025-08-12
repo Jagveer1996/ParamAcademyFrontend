@@ -117,6 +117,8 @@ function App() {
           <Route path='termcondition' element={<TermsCondition />} />
           <Route path='testStar' element={<TestStar />} />
           <Route path='testCountry' element={<TestCountry />} />
+
+          {/* <Route path='*' element={<404 />} /> */}
       </Routes>
       </QueryClientProvider>
       {/* <Footer/> */}
