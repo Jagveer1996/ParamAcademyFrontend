@@ -7,7 +7,7 @@ import GetBrochure from './GetBrochure'
 import Questions from './Questions'
 
 const Home = () => {
-  console.log("first",localStorage.getItem('loginData'))
+  // console.log("first",localStorage.getItem('loginData'))
   return (
     <>
         <Hero />

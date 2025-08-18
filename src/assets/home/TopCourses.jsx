@@ -6,6 +6,7 @@ import cardtop2 from '../images/cardtop2.png';
 import cardtop3 from '../images/cardtop3.png';
 import cardtop4 from '../images/cardtop4.png';
 import { getCourseApi } from '../../api/courses/courseApi';
+import { AccessToken } from '../../global';
 // import topicon1 from '../../images/topicon1.png';
 // import topheart from '../../images/topheart.png';
 // import topweekicon from '../../images/topweekicon.png';
@@ -41,10 +42,10 @@ const TopCourses = () => {
 const {data,isSuccess, isLoading,isError,error,
   } = useQuery({
     queryKey: ["getCourseApi"],
-    queryFn: getCourseApi,
+    queryFn: ()=>getCourseApi(AccessToken),
 });
 
-// console.log("first",data?.data)
+// console.log("first",data)
   return (
     <div className='w-full bg-[#ECF1FE] flex justify-center flex-col items-center gap-[50px] py-[80px]'>
         <div className='w-[90%] flex flex-col justify-center items-center'>

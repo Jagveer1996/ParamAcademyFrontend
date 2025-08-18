@@ -20,7 +20,7 @@ const ManageCourse = () => {
         queryFn: ()=>getCourseApi(AccessToken)
     })
 
-    console.log("getCourseApi", data)
+    // console.log("getCourseApi", data)
 
     // const imageUrl = `${process.env.REACT_APP_API_URL}/uploads/${data?.data.image}`;
     // console.log("image URL", imageUrl)
@@ -60,7 +60,7 @@ const ManageCourse = () => {
 
                         {
                             data?.data.map((item, index) => {
-                                console.log(`${BASEURL}/uploads/courseImage/${item.image}`)
+                                {/* console.log(`${BASEURL}/uploads/courseImage/${item.image}`) */}
                                 return (
                                     <div key={index} className='w-[359px] h-[460px] flex flex-col gap-[24px] p-[16px] border-[1px] rounded-[15px]'>
                                         <img src={`${BASEURL}/${item.image}`} className='w-[327px] max-w-[327px] max-h-[220px] h-[220px] rounded-[15px]' />
