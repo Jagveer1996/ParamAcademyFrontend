@@ -51,6 +51,7 @@ import HireFromusDetail from './assets/Admin/HireFromusDetail'
 import ManageCourse from './assets/Admin/ManageCourse'
 import Dashboard from './assets/Admin/Dashboard'
 import WorkWithusDetail from './assets/Admin/WorkWithusDetail'
+import ManageAdmin from './assets/Admin/ManageAdmin'
 
 // Create a client
 const queryClient = new QueryClient()
@@ -81,6 +82,7 @@ function App() {
 
         <Route element = {<AdminRouth />} >
           <Route path='dashboard' element = {<Dashboard />} />
+          <Route path="manageadmin" element={<ManageAdmin />} />
           <Route path='profile' element = {<Profile />} />
           <Route path='managecourse' element={<ManageCourse />} />
           <Route path='addcourse' element = {<AddCourse />} />
